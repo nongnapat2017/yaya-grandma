@@ -7,7 +7,8 @@
     <title>Yaya vs Grandma</title>
     <style>
         :root {
-            --exhausted: 50%;
+            /* การกำหนดตัวแปรใน css */
+            --exhausted: 50%; 
             --yayaSize: 1.0;
             --inLoveWithYaya: 20px;
             --grandmaSize: 1.0;
@@ -60,5 +61,15 @@
         <img class="yaya" src="images/yaya.png" alt="Yaya">
         <img class="grandma" src="images/grandma.png" alt="Grandma">
     </div>
+<script>
+function handleInput()
+{
+    let exhausted = 50 - (this.value / 2);
+    document.documentElement.style.setProperty("--exhausted", exhausted + "%");
+    console.log(this.value)
+}
+const input = document.querySelector("input");
+input.addEventListener("input", handleInput)
+</script>
 </body>
 </html>
